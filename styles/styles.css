@@ -229,7 +229,7 @@ figure:first-child {
 }
 
 .products {
-    background-image: url('/images/blacksmith.png');
+    background-image: url('../images/blacksmith.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
@@ -328,7 +328,7 @@ figure:first-child {
 }
 
 .about_blacksmithing h3 {
-    background-image: url("/images/frame.png");
+    background-image: url("../images/frame.png");
     padding-top: 150px;
     background-size: 240px;
     background-position: center;
@@ -515,19 +515,19 @@ figure:first-child {
 .inst::before {
     width: 20px;
     height: 23px;
-    background: url(/icons/inst.svg) no-repeat;
+    background: url("../icons/inst.svg") no-repeat;
 }
 
 .twit::before {
     width: 23px;
     height: 20px;
-    background: url(/icons/tw\ copy.svg) no-repeat;
+    background: url("../icons/tw.svg") no-repeat;
 }
 
 .face::before {
     width: 13px;
     height: 25px;
-    background: url(/icons/fb.svg) no-repeat;
+    background: url("../icons/fb.svg") no-repeat;
 }
 
 .copyright {
