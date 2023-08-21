@@ -1,0 +1,734 @@
+@font-face {
+    font-family: 'Alex Brush';
+    src: url('../fonts/AlexBrush-Regular.woff2') format('woff2'),
+        url('../fonts/AlexBrush-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bad Script';
+    src: url('../fonts/BadScript-Regular.woff2') format('woff2'),
+        url('../fonts/BadScript-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('../fonts/Vollkorn-Italic.woff2') format('woff2'),
+        url('../fonts/Vollkorn-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('../fonts/Vollkorn-Regular.woff2') format('woff2'),
+        url('../fonts/Vollkorn-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+}
+
+ul,li {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 18px;
+    color: #ffffff;
+    font-family: "Arial";
+    padding-top: 25px;
+    padding-bottom: 44px;
+}
+
+hr {
+    width: 100%;
+    height: 12px;
+    background-color: #ffca00;
+}
+
+figure {
+    margin: 0;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+figure:first-child {
+    padding-top: 20px;
+}
+
+.wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.header {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.small {
+    height: 7px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu_options {
+    padding-top: 22px;
+    padding-bottom: 24px;
+}
+
+.menu_burger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ffca00;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+
+.menu_burger span::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 5px;
+    background-color: #ffca00;
+    margin-left: -10px;
+    margin-top: -1px;
+    /* border: 2px solid #ffca00; */
+}
+
+.menu_burger span {
+    display: block;
+    width: 18px;
+    height: 3px;
+    background-color: #ffca00;
+    /* border: 2px solid #ffca00; */
+    margin-left: 10px;
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
+
+.menu-burger-open span::before {
+    opacity: 0;
+}
+
+.menu-burger-open span:first-child {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 24px;
+    left: 6px;
+}
+
+.menu-burger-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-burger-open span:last-child {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 24px;
+    left: 6px;
+}
+
+.menu_list {
+    display: none;
+    position: fixed;
+    font-size: 25px;
+    width: 100%;
+    height: 100vh;
+    /* z-index: 999; */
+    left: 0;
+    /* right: 52px; */
+    top: 0;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    background: #000;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 100px;
+    text-align: left;
+    padding-left: 88px;
+    z-index: 1;
+}
+
+.menu_list a {
+    color: #ffca00;
+}
+
+.active-burger li {
+    display: block;
+}
+
+.active-burger {
+    display: block;
+    animation: fadeIn 1s ease;
+}
+
+.phone {
+    font-size: 30px;
+    color: #ffca00;
+    font-weight: 400;
+    font-family: "Alex Brush";
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    padding-top: 26px;
+}
+
+.logo img {
+    display: block;
+    width: 121px;
+    height: 121px;
+}
+
+.logo_name p {
+    padding-top: 15px;
+}
+
+.logo_coursive {
+    font-size: 37px;
+    color: #ffffff;
+    font-weight: 400;
+    padding-top: 5px;
+    font-family: "Bad Script";
+}
+
+.products {
+    background-image: url('/images/blacksmith.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.products li a, .products p {
+    font-size: 18px;
+    color: #ffffff;
+    font-family: "Arial";
+}
+
+.products p {
+    font-size: 36px;
+    padding-bottom: 40px;
+    padding-top: 88px;
+}
+
+.option_products {
+    display: block;
+    position: relative;
+    font-size: 18px;
+    color: #ffffff;
+    font-family: "Arial";
+    padding-top: 6px;
+    padding-left: 45px;
+    margin: 13px 0;
+    padding-bottom: 43px;
+}
+
+.option_products::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+}
+
+.gar::before {
+    width: 40px;
+    height: 32px;
+    background: url('../icons/grass.svg') no-repeat;
+}
+
+.fen::before {
+    width: 36px;
+    height: 32px;
+    background: url('../icons/fence.svg') no-repeat;
+}
+
+.gate::before {
+    width: 32px;
+    height: 40px;
+    background: url('../icons/shield.svg') no-repeat;
+}
+
+.fur::before {
+    width: 40px;
+    height: 30px;
+    background: url('../icons/house.svg') no-repeat;
+}
+
+.callback_button {
+    width: 320px;
+    height: 59px;
+    background-color: #ffca00;
+    border: 2.011123929139024px solid #000000;
+    text-align: center;
+    margin: 40px auto;
+}
+
+.callback_button a {
+    display: block;
+    font-size: 24px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Vollkorn";
+    margin-top: 13px;
+}
+
+.about {
+    background-color: black;
+    color: white;
+}
+
+.about h3 {
+    text-align: center;
+}
+
+.about p {
+    line-height: 24px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.about_blacksmithing {
+    padding-bottom: 54px;
+}
+
+.about_blacksmithing h3 {
+    background-image: url("/images/frame.png");
+    padding-top: 150px;
+    background-size: 240px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-bottom: 32px;
+    padding-top: 200px;
+}
+
+.about_blacksmithing p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Vollkorn";
+    text-align: left;
+    padding-bottom: 36px;
+}
+
+.discount span {
+    position: relative;
+    font-size: 100px;
+    /* line-height: 24px; */
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Alex Brush";
+}
+
+.discount sup {
+    position: absolute;
+    font-size: 42px;
+    /* line-height: 24px; */
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Bad Script";
+    top: -36px;
+    right: -80px;
+}
+
+.discount img {
+    width: 100%;
+}
+
+.discount_flowers {
+    padding: 28px 44px 40px;
+}
+
+.discount_flowers p {
+    margin-bottom: 36px;
+}
+
+.discount_flowers p:first-child {
+    margin-bottom: 16px;
+}
+
+.our_products p {
+    font-size: 42px;
+    color: #000000;
+    font-family: "Arial";
+    text-align: center;
+}
+
+.price_header {
+    padding-top: 58px;
+    padding-bottom: 51px;
+}
+
+.price-list p {
+    background-color: #000000;
+    font-size: 42px;
+    color: #ffffff;
+    font-family: "Arial";
+    text-align: center;
+    padding: 24px;
+    margin: 0;
+}
+
+.price-list a {
+    display: block;
+    background-color: #ffca00;
+    border: 2.011123929139024px solid #000000;
+    font-size: 24px;
+    color: #000000;
+    font-family: "Arial";
+    padding: 35px 49px;
+    text-align: left;
+    border-top: none;
+}
+
+.price-list a:hover {
+    background-color: #b5910a;
+    text-shadow: 1px 1px black;
+}
+
+.price_products {
+    background-color: black;
+    padding: 10px;
+}
+
+.price_products img, .price_products .map {
+    width: 100%;
+    background-color: black;
+    border: 11px solid #ffca00;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.about_company h3 {
+    padding-top: 56px;
+    padding-bottom: 40px;
+}
+
+.about_company p {
+    padding-bottom: 50px;
+}
+
+.price_products p {
+    font-size: 36px;
+    color: #ffca00;
+    font-weight: 400;
+    font-family: "Bad Script";
+    margin: 0;
+    text-align: center;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.map iframe {
+    width: 100%;
+    height: 350px;
+    margin-top: -62px;
+    overflow: hidden;
+}
+
+.footer {
+    background-color: black;
+    color: #ffffff;
+    text-align: left;
+}
+
+.contacts {
+    padding: 26px 35px;
+}
+
+.contacts h3 {
+    text-align: center;
+}
+
+.contacts p {
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+    font-family: "Arial";
+    padding-bottom: 15px;
+    padding-top: 20px;
+}
+
+.footer a {
+    display: flex;
+    flex-direction: column;
+}
+
+.social {
+    position: relative;
+    color: white;
+    padding-left: 30px;
+    margin: 13px 0;
+}
+
+.inst::before,
+.twit::before,
+.face::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -3px;
+}
+
+.inst::before {
+    width: 20px;
+    height: 23px;
+    background: url(/icons/inst.svg) no-repeat;
+}
+
+.twit::before {
+    width: 23px;
+    height: 20px;
+    background: url(/icons/tw\ copy.svg) no-repeat;
+}
+
+.face::before {
+    width: 13px;
+    height: 25px;
+    background: url(/icons/fb.svg) no-repeat;
+}
+
+.copyright {
+    padding: 16px 54px;
+}
+
+@media screen and (min-width: 1280px) {
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 36px;
+        padding-top: 54px;
+        padding-bottom: 26px;
+    }
+
+    .wrapper {
+        padding-bottom: 60px;
+    }
+
+    .menu_burger {
+        display: none;
+    }
+
+    .callback_button {
+        margin: 40px 0;
+    }
+
+    .menu_list {
+        display: flex;
+        list-style: none;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        position: static;
+        padding-top: 25px;
+        padding-left: 0;
+    }
+    
+    .menu_list ul {
+        display: flex;
+        column-gap: 22px;
+    }
+
+    .menu_list a {
+        color: white;
+        display: inline-block;
+    }
+
+    .logo_info {
+        display: flex;
+        column-gap: 18px;
+    }
+
+    .logo_name p {
+        font-size: 28px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .option_products {
+        font-size: 36px !important;
+        padding-bottom: 26px;
+    }
+
+    .products p {
+        font-size: 42px;
+        padding-top: 20px;
+        padding-bottom: 96px;
+    }
+
+    .option_products::before {
+        top: 6px;
+    }
+
+    .about_blacksmithing h3 {
+        font-size: 42px;
+        background-size: 655px;
+        padding-top: 354px;
+    }
+
+    .flowers {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flowers p {
+        font-size: 42px;
+        line-height: 60px;
+    }
+
+    .flowers span {
+        font-size: 100px;
+    }
+
+    .flowers sup {
+        font-size: 42px;
+    }
+
+    .flowers img {
+        display: block;
+        width: 100%;
+    }
+    
+    .flowers_example {
+        width: 45%;
+    }
+
+    .discount_flowers {
+        padding: 28px 44px 20px;
+    }
+
+    .our_company {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .price_info {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .price-list p {
+        /* width: 320px; */
+        font-size: 28px;
+        padding-top: 18px;
+        padding-bottom: 15px;
+    }
+
+    .price-list a {
+        width: 320px;
+        font-size: 24px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .price_holder {
+        display: flex;
+        row-gap: 28px;
+        column-gap: 28px;
+        flex-wrap: wrap;
+    }
+
+    figure {
+        padding: 0;
+    }
+
+    figure:first-child {
+        padding-top: 0;
+    }
+
+    .price_products {
+        min-width: 40%;
+    }
+
+    .about_company h3 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .our_place p {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .footer_contacts {
+        display: flex;
+        justify-content: start;
+        flex-direction: row-reverse;
+        padding-top: 40px;
+        padding-bottom: 44px;
+        column-gap: 66px;
+    }
+
+    .contacts h3 {
+        font-size: 42px;
+    }
+
+    .contacts p {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    .phone {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .social {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    .map, .map iframe {
+        height: 395px;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}
